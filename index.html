@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurometro</title>
+  <link rel="icon" href="data:,">
+  <!-- Unica risorsa esterna: i font pixel da Google Fonts.
+       Senza internet il gioco funziona lo stesso, con un font monospazio di riserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HOME ============ -->
+  <section id="schermata-home" class="schermata attiva" aria-label="Menu principale">
+    <h1 class="logo">AUROMETRO</h1>
+    <p class="sottotitolo">Misuratore ufficiale di aura della classe</p>
+
+    <div class="menu">
+      <button id="btn-riprendi" class="btn grande" hidden>▶ RIPRENDI PARTITA</button>
+      <button id="btn-nuova" class="btn grande">▶ NUOVA PARTITA</button>
+      <button id="btn-carica" class="btn">CARICA PERSONAGGI (JSON)</button>
+      <input type="file" id="file-personaggi" accept=".json,application/json" hidden>
+    </div>
+
+    <div id="stato-contenuti" class="stato" role="status" aria-live="polite"></div>
+    <p id="avviso-salvataggio" class="stato" hidden>
+      Il browser non permette di salvare: si gioca normalmente, ma "Riprendi partita" non sarà disponibile.
+    </p>
+  </section>
+
+  <!-- ============ SCELTA SQUADRE ============ -->
+  <section id="schermata-squadre" class="schermata" aria-label="Scelta squadre">
+    <h2 class="titolo">QUANTE SQUADRE?</h2>
+    <div id="scelta-numero" class="scelta-numero" role="group" aria-label="Numero di squadre">
+      <button class="btn" data-n="1" aria-pressed="true">1</button>
+      <button class="btn" data-n="2" aria-pressed="false">2</button>
+      <button class="btn" data-n="3" aria-pressed="false">3</button>
+      <button class="btn" data-n="4" aria-pressed="false">4</button>
+    </div>
+    <div id="nomi-squadre" class="nomi"></div>
+    <div class="menu riga">
+      <button id="btn-indietro" class="btn">◀ INDIETRO</button>
+      <button id="btn-via" class="btn grande">VIA!</button>
+    </div>
+  </section>
+
+  <!-- ============ GIOCO ============ -->
+  <section id="schermata-gioco" class="schermata" aria-label="Partita">
+    <div id="campo" class="campo"></div>
+
+    <!-- Pannello dell'operatore: ogni comando ha anche un tasto (tra parentesi) -->
+    <div id="comandi" class="comandi">
+      <button id="c-meno" class="btn meno" title="Tasto: -">- AURA <kbd>-</kbd></button>
+      <button id="c-piu" class="btn piu" title="Tasto: +">+ AURA <kbd>+</kbd></button>
+      <button id="c-turno" class="btn" title="Tasto: TAB">PASSA TURNO <kbd>TAB</kbd></button>
+      <button id="c-annulla" class="btn" title="Tasto: Z">ANNULLA <kbd>Z</kbd></button>
+      <button id="c-fine" class="btn" title="Tasto: F">FINE <kbd>F</kbd></button>
+      <button id="c-esci" class="btn" title="Tasto: ESC">ESCI <kbd>ESC</kbd></button>
+      <button id="c-nascondi" class="btn" title="Tasto: H">NASCONDI <kbd>H</kbd></button>
+    </div>
+  </section>
+
+  <!-- ============ FINALE ============ -->
+  <section id="schermata-finale" class="schermata" aria-label="Risultato finale">
+    <h2 id="titolo-finale" class="titolo">RISULTATO FINALE</h2>
+    <div id="campo-finale" class="campo"></div>
+    <div class="comandi comandi-finale">
+      <button id="f-annulla" class="btn" title="Tasto: Z">◀ TORNA ALLA PARTITA <kbd>Z</kbd></button>
+      <button id="f-menu" class="btn" title="Tasto: ESC">CHIUDI E VAI AL MENU <kbd>ESC</kbd></button>
+    </div>
+  </section>
+
+  <!-- Bottone per riaprire i comandi quando sono nascosti -->
+  <button id="mostra-comandi" class="btn" title="Tasto: H">COMANDI <kbd>H</kbd></button>
+
+  <!-- Messaggi brevi (es. "ANNULLATO") -->
+  <div id="avviso" class="avviso" role="status" aria-live="polite"></div>
+
+  <!-- Finestra di conferma -->
+  <div id="dialogo" class="dialogo" hidden>
+    <div class="finestra" role="dialog" aria-modal="true" aria-labelledby="dialogo-titolo">
+      <h2 id="dialogo-titolo"></h2>
+      <p id="dialogo-testo"></p>
+      <div id="dialogo-bottoni" class="menu"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "titolo": "Set base",
+  "personaggi": [
+    { "da": -20, "a": -19, "nome": "Buco nero di aura", "frase": "Assorbe l'aura di chi gli sta vicino.", "immagine": "" },
+    { "da": -18, "a": -17, "nome": "Cringe cosmico", "frase": "Rilevato dai telescopi.", "immagine": "" },
+    { "da": -16, "a": -15, "nome": "Vocale da 7 minuti", "frase": "Nessuno lo ascolterà. Mai.", "immagine": "" },
+    { "da": -14, "a": -13, "nome": "Rispondi a tutti", "frase": "Ha coinvolto 400 persone. Per errore.", "immagine": "" },
+    { "da": -12, "a": -11, "nome": "Applausi all'atterraggio", "frase": "Fiero. Solo lui.", "immagine": "" },
+    { "da": -10, "a": -9, "nome": "Password: 123456", "frase": "Sicurezza percepita.", "immagine": "" },
+    { "da": -8, "a": -7, "nome": "Batteria all'1%", "frase": "Resiste. Male.", "immagine": "" },
+    { "da": -6, "a": -5, "nome": "Webcam accesa per sbaglio", "frase": "Tutti hanno visto tutto.", "immagine": "" },
+    { "da": -4, "a": -3, "nome": "Microfono non silenziato", "frase": "Si sente il frullatore.", "immagine": "" },
+    { "da": -2, "a": -1, "nome": "Leggermente sotto zero", "frase": "Recuperabile. Forse.", "immagine": "" },
+    { "da": 0, "a": 0, "nome": "NPC del parcheggio", "frase": "Esiste. Tecnicamente.", "immagine": "" },
+    { "da": 1, "a": 2, "nome": "Comparsa sullo sfondo", "frase": "Inquadrato per sbaglio.", "immagine": "" },
+    { "da": 3, "a": 4, "nome": "Wi-Fi che regge", "frase": "Stabile. Per ora.", "immagine": "" },
+    { "da": 5, "a": 6, "nome": "Main character in prova", "frase": "Periodo di prova: 3 mesi.", "immagine": "" },
+    { "da": 7, "a": 8, "nome": "Risposta in 3 secondi", "frase": "Riflessi da speedrunner.", "immagine": "" },
+    { "da": 9, "a": 10, "nome": "Protagonista secondario", "frase": "Ha una storyline, forse.", "immagine": "" },
+    { "da": 11, "a": 12, "nome": "Aura certificata", "frase": "Timbro e firma.", "immagine": "" },
+    { "da": 13, "a": 14, "nome": "Main character", "frase": "La trama gira intorno a lui.", "immagine": "" },
+    { "da": 15, "a": 16, "nome": "Camminata al rallentatore", "frase": "Esplosione alle spalle. Non si gira.", "immagine": "" },
+    { "da": 17, "a": 18, "nome": "Boss finale", "frase": "E questa era solo la prima fase.", "immagine": "" },
+    { "da": 19, "a": 20, "nome": "Leggenda della classe", "frase": "Se ne parlerà per anni.", "immagine": "" }
+  ],
+  "segreto": {
+    "nome": "Aura infinita",
+    "frase": "L'aurometro è esploso. Nessuno era pronto.",
+    "immagine": ""
+  }
+}

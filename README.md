@@ -74,6 +74,8 @@ Tutto è in `contenuti/personaggi.json`. Per aggiungere le immagini:
 Puoi anche preparare file diversi (es. `personaggi-cyber.json`) e caricarli in aula con **CARICA PERSONAGGI**.
 
 ### Specifiche dei PNG
+Nella cartella `contenuti/img/` ci sono già 22 segnaposto con i nomi giusti (es. `p05-shrek.png`): per mettere la grafica vera basta **sostituire il file tenendo lo stesso nome**, senza toccare il JSON.
+
 - Tela **128×160 px** (proporzione 4:5), sfondo trasparente, stessa tela per tutti.
 - Piedi a filo del bordo basso, figura centrata, circa 16 px liberi sopra la testa.
 - Pixel art vera: colori pieni, niente sfumature, niente anti-aliasing.
